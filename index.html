@@ -15,7 +15,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Config for custom colors -->
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
@@ -47,43 +47,21 @@
   </script>
 
   <style>
-    /* subtle selection and scroll */
     ::selection{background:#22E3A9;color:#0b1220}
     html{scroll-behavior:smooth}
     .glass{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,0.08)}
     .btn-neon{box-shadow: 0 0 10px rgba(49,225,255,.6), inset 0 0 8px rgba(34,227,169,.35)}
   </style>
+</head>
+<body class="bg-base-900 text-white">
 
-  <!-- JSON‑LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"EducationalOrganization",
-    "name":"Crypto + Freelancing Institute",
-    "url":"",
-    "description":"Training programs in crypto trading, blockchain, Upwork/Fiverr freelancing.",
-    "sameAs": [""],
-    "address": {"@type":"PostalAddress","addressCountry":"PK"}
-  }
-  </script>
-
-  <!-- Google Analytics (placeholder) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
-  </script> -->
-<!-- Header with Hamburger Navbar -->
 <!-- Navbar -->
 <header class="bg-black sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-    <!-- Logo -->
     <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-[#14ffec]">
       <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-[#14ffec] to-[#0d7377] shadow-lg"></div>
       Crypto & Freelance Institute
     </a>
-
-    <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-6 text-white/80">
       <a href="index.html" class="hover:text-[#14ffec] transition">Home</a>
       <a href="courses.html" class="hover:text-[#14ffec] transition">Courses</a>
@@ -91,12 +69,8 @@
       <a href="contact.html" class="hover:text-[#14ffec] transition">Contact</a>
       <a href="#enroll" class="bg-[#14ffec] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#0dffe0] transition">Enroll Now</a>
     </nav>
-
-    <!-- Mobile Hamburger (=) -->
     <button class="md:hidden text-2xl text-white" onclick="toggleMobileNav()">&#61;</button>
   </div>
-
-  <!-- Mobile Menu -->
   <div id="mobileNav" class="hidden md:hidden bg-black px-6 py-4 flex flex-col space-y-2 text-white/90">
     <a href="index.html" class="hover:text-[#14ffec] transition">Home</a>
     <a href="courses.html" class="hover:text-[#14ffec] transition">Courses</a>
@@ -105,194 +79,145 @@
     <a href="#enroll" class="bg-[#14ffec] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#0dffe0] transition text-center">Enroll Now</a>
   </div>
 </header>
-
 <script>
-  function toggleMobileNav() {
-    const nav = document.getElementById('mobileNav');
-    nav.classList.toggle('hidden');
-  }
+  function toggleMobileNav(){document.getElementById('mobileNav').classList.toggle('hidden');}
 </script>
 
-
-  <!-- Hero -->
-  <section id="home" class="bg-hero-gradient relative overflow-hidden">
-    <div class="absolute inset-0 bg-grid bg-[size:22px_22px] opacity-20 pointer-events-none"></div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 rounded-full border border-accent-500/30 px-3 py-1 text-xs text-accent-500 mb-4">
-            <span class="h-1.5 w-1.5 rounded-full bg-accent-500"></span> Learn • Build • Earn
-          </div>
-          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
-  <span class="text-white">Where</span> 
-  <span class="text-accent-500">Crypto Skills</span> 
-  <span class="text-white">meet</span> 
-  <span class="text-neon">Freelance Success</span>
-</h1>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#enroll" class="btn-neon rounded-xl bg-accent-500 px-6 py-3 font-semibold text-base-900 hover:bg-accent-400 transition">Enroll Now</a>
-            <a href="#programs" class="rounded-xl border border-white/10 px-6 py-3 font-semibold text-white/90 hover:bg-white/5 transition">Explore Courses</a>
-          </div>
-          <div class="mt-8 flex gap-8 text-white/60">
-            <div><p class="text-3xl font-bold text-white">500+</p><p class="text-sm">Active Students</p></div>
-            <div><p class="text-3xl font-bold text-white">10+</p><p class="text-sm">Weekly Sessions</p></div>
-            <div><p class="text-3xl font-bold text-white">4.9★</p><p class="text-sm">Average Rating</p></div>
-          </div>
+<!-- Hero -->
+<section id="home" class="bg-hero-gradient relative overflow-hidden">
+  <div class="absolute inset-0 bg-grid bg-[size:22px_22px] opacity-20"></div>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24 relative">
+    <div class="grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 rounded-full border border-accent-500/30 px-3 py-1 text-xs text-accent-500 mb-4">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent-500"></span> Learn • Build • Earn
         </div>
-        <div class="relative">
-          <div class="glass rounded-3xl p-4 shadow-neon">
-            <img src="https://placehold.co/900x520/png?text=Crypto+%2B+Freelancing+Institute" alt="Hero preview" class="rounded-2xl w-full object-cover" />
-          </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+          <span class="text-white">Where</span> 
+          <span class="text-accent-500">Crypto Skills</span> 
+          <span class="text-white">meet</span> 
+          <span class="text-neon">Freelance Success</span>
+        </h1>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#enroll" class="btn-neon rounded-xl bg-accent-500 px-6 py-3 font-semibold text-base-900 hover:bg-accent-400 transition">Enroll Now</a>
+          <a href="#courses" class="rounded-xl border border-white/10 px-6 py-3 font-semibold text-white/90 hover:bg-white/5 transition">Explore Courses</a>
         </div>
       </div>
-    </div>
-  </section>
-
-
-<!-- Courses Section -->
-<section id="courses" class="container mx-auto px-6 py-16">
-  <div class="text-center mb-10">
-    <h2 class="text-3xl font-bold text-white">Courses & Programs</h2>
-    <p class="text-white/60">Choose a track that fits your goal</p>
-  </div>
-
-  <div class="grid md:grid-cols-3 gap-8">
-    <!-- Basic -->
-    <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold text-accent-400">Basic</h3>
-      <ul class="mt-4 text-white/70 space-y-2">
-        <li>Duration: 1 month</li>
-        <li>Crypto Fundamentals</li>
-        <li>Freelance Basics</li>
-        <li>Live Trading Included</li>
-      </ul>
-      <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
-    </div>
-
-    <!-- Intermediate -->
-    <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold text-accent-400">Intermediate</h3>
-      <ul class="mt-4 text-white/70 space-y-2">
-        <li>Duration: 2 months</li>
-        <li>Advanced Crypto Concepts</li>
-        <li>Freelance Projects & Portfolio</li>
-        <li>Live Trading Included</li>
-      </ul>
-      <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
-    </div>
-
-    <!-- Premium -->
-    <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold text-accent-400">Premium</h3>
-      <ul class="mt-4 text-white/70 space-y-2">
-        <li>Duration: 3 months</li>
-        <li>Full Crypto Trading & Strategy</li>
-        <li>Freelance Business & Client Management</li>
-        <li>Live Trading Included</li>
-      </ul>
-      <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
+      <div class="glass rounded-3xl p-4 shadow-neon">
+        <img src="https://placehold.co/900x520/png?text=Crypto+%2B+Freelancing+Institute" class="rounded-2xl w-full" />
+      </div>
     </div>
   </div>
 </section>
 
-
-  <!-- Trust Bar -->
-  <section class="border-y border-white/5 bg-base-800/60">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-wrap items-center justify-center gap-8 opacity-80">
-      <img src="https://placehold.co/120x36/png" class="h-6 opacity-70" alt="Logo"/>
-      <img src="https://placehold.co/120x36/png" class="h-6 opacity-70" alt="Logo"/>
-      <img src="https://placehold.co/120x36/png" class="h-6 opacity-70" alt="Logo"/>
-      <img src="https://placehold.co/120x36/png" class="h-6 opacity-70" alt="Logo"/>
-      <img src="https://placehold.co/120x36/png" class="h-6 opacity-70" alt="Logo"/>
+<!-- Courses -->
+<section id="courses" class="relative bg-hero-gradient overflow-hidden py-20">
+  <div class="absolute inset-0 bg-grid bg-[size:22px_22px] opacity-10"></div>
+  <div class="container mx-auto px-6 relative">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold">Courses & Programs</h2>
+      <p class="text-white/60">Choose a track that fits your goal</p>
     </div>
-  </section>
-
- 
-
-  <!-- About -->
-  <section id="about" class="py-20 border-y border-white/5 bg-base-800/40">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-      <div class="order-2 lg:order-1">
-        <h2 class="text-3xl sm:text-4xl font-bold">Why Choose Us</h2>
-        <p class="mt-3 text-white/70">A practical institute focused on outcomes: learn fast, apply immediately, and start earning with guidance from experienced mentors.</p>
-        <ul class="mt-6 space-y-3 text-white/80">
-          <li class="flex gap-3"><span class="text-accent-500">✔</span> Structured roadmaps: Beginner → Advanced</li>
-          <li class="flex gap-3"><span class="text-accent-500">✔</span> Real projects & portfolio building</li>
-          <li class="flex gap-3"><span class="text-accent-500">✔</span> Live Q&A, community, and feedback</li>
-          <li class="flex gap-3"><span class="text-accent-500">✔</span> Job & client‑acquisition playbooks</li>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass border border-white/10 p-6 rounded-2xl shadow-neon hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-accent-400">Basic</h3>
+        <ul class="mt-4 text-white/70 space-y-2">
+          <li>Duration: 1 month</li><li>Crypto Fundamentals</li><li>Freelance Basics</li><li>Live Trading Included</li>
         </ul>
-        <div class="mt-6 flex gap-3">
-          <a href="#programs" class="rounded-xl border border-white/10 px-5 py-3 font-semibold hover:bg-white/5 transition">View Programs</a>
-          <a href="#contact" class="rounded-xl px-5 py-3 font-semibold text-base-900 bg-accent-500 btn-neon hover:bg-accent-400 transition">Talk to Advisor</a>
-        </div>
+        <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
       </div>
-      <div class="order-1 lg:order-2">
-        <div class="glass rounded-3xl p-4">
-          <img src="https://placehold.co/720x500/png?text=Mentorship+%26+Community" alt="About image" class="rounded-2xl w-full object-cover"/>
-        </div>
-      </div>
-    </div>
-  </section>
-
- 
-
-
-  <!-- Footer -->
-  <footer class="border-t border-white/5 bg-base-900/80">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8">
-      <div>
-        <div class="flex items-center gap-2">
-          <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-accent-500 to-neon"></div>
-          <span class="font-semibold">Crypto Freelancing Institute</span>
-        </div>
-        <p class="mt-3 text-white/60 text-sm">Learn, build, and earn with structured programs and real mentorship.</p>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Explore</h4>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li><a href="courses.html" class="hover:text-white">Courses</a></li>
-          <li><a href="about.html" class="hover:text-white">About</a></li>
-          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      <div class="glass border border-white/10 p-6 rounded-2xl shadow-neon hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-accent-400">Intermediate</h3>
+        <ul class="mt-4 text-white/70 space-y-2">
+          <li>Duration: 2 months</li><li>Advanced Crypto Concepts</li><li>Freelance Projects & Portfolio</li><li>Live Trading Included</li>
         </ul>
+        <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
       </div>
-      <div>
-        <h4 class="font-semibold mb-3">Legal</h4>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li><a href="#" class="hover:text-white">Terms</a></li>
-          <li><a href="#" class="hover:text-white">Privacy</a></li>
-          <li><a href="#" class="hover:text-white">Refund Policy</a></li>
+      <div class="glass border border-white/10 p-6 rounded-2xl shadow-neon hover:scale-105 transition">
+        <h3 class="text-xl font-semibold text-accent-400">Premium</h3>
+        <ul class="mt-4 text-white/70 space-y-2">
+          <li>Duration: 3 months</li><li>Full Crypto Trading & Strategy</li><li>Freelance Business & Client Management</li><li>Live Trading Included</li>
         </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Follow</h4>
-        <div class="flex gap-3 text-white/70">
-          <a href="#" aria-label="Facebook" class="hover:text-white">Fb</a>
-          <a href="#" aria-label="Instagram" class="hover:text-white">Ig</a>
-          <a href="#" aria-label="LinkedIn" class="hover:text-white">Li</a>
-          <a href="#" aria-label="YouTube" class="hover:text-white">Yt</a>
-        </div>
+        <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
       </div>
     </div>
-    <div class="border-t border-white/5 py-4 text-center text-white/60 text-sm">
-      © <span id="year"></span> Crypto Freelancing Institute. All rights reserved.
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="relative bg-hero-gradient overflow-hidden py-20">
+  <div class="absolute inset-0 bg-grid bg-[size:22px_22px] opacity-10"></div>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center relative">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold">Why Choose Us</h2>
+      <p class="mt-3 text-white/70">A practical institute focused on outcomes: learn fast, apply immediately, and start earning with guidance from experienced mentors.</p>
+      <ul class="mt-6 space-y-3 text-white/80">
+        <li>✔ Structured roadmaps: Beginner → Advanced</li>
+        <li>✔ Real projects & portfolio building</li>
+        <li>✔ Live Q&A, community, and feedback</li>
+        <li>✔ Job & client-acquisition playbooks</li>
+      </ul>
+      <div class="mt-6 flex gap-3">
+        <a href="#courses" class="rounded-xl border border-white/10 px-5 py-3 font-semibold hover:bg-white/5 transition">View Programs</a>
+        <a href="#contact" class="rounded-xl px-5 py-3 font-semibold text-base-900 bg-accent-500 btn-neon hover:bg-accent-400 transition">Talk to Advisor</a>
+      </div>
     </div>
-  </footer>
+    <div class="glass rounded-3xl p-4 shadow-neon">
+      <img src="https://placehold.co/720x500/png?text=Mentorship+%26+Community" class="rounded-2xl w-full"/>
+    </div>
+  </div>
+</section>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/000000000000" target="_blank" class="fixed bottom-5 right-5 z-40 rounded-full bg-accent-500 p-4 shadow-neon hover:bg-accent-400 transition" aria-label="WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-base-900" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.91 11.91 0 0 0 12.02 0 11.99 11.99 0 0 0 .03 12c0 2.11.55 4.06 1.64 5.84L0 24l6.35-1.63a11.71 11.71 0 0 0 5.67 1.45h.01c6.61 0 12-5.39 12-12 0-3.2-1.24-6.2-3.51-8.34ZM12.03 22.1h-.01c-1.8 0-3.57-.48-5.12-1.38l-.37-.22-3.77.97 1-3.67-.24-.38A9.94 9.94 0 0 1 2.02 12C2.03 6.96 6.99 2.9 12 2.9c2.48 0 4.81.96 6.56 2.7a9.09 9.09 0 0 1 2.71 6.44c0 5.02-4.96 10.06-9.24 10.06Zm5.46-7.52c-.3-.15-1.77-.87-2.05-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.36.23-.66.08-.3-.15-1.26-.46-2.4-1.46-.89-.77-1.48-1.72-1.65-2.01-.17-.3-.02-.46.13-.61.14-.14.3-.36.45-.53.15-.17.2-.29.3-.49.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.49-.5-.68-.5h-.58c-.2 0-.53.08-.81.38-.28.3-1.07 1.04-1.07 2.53 0 1.49 1.1 2.94 1.26 3.14.15.2 2.17 3.32 5.26 4.51.74.32 1.31.5 1.76.64.74.24 1.41.2 1.94.12.59-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
-  </a>
+<!-- Footer -->
+<footer class="relative bg-hero-gradient overflow-hidden border-t border-white/10">
+  <div class="absolute inset-0 bg-grid bg-[size:22px_22px] opacity-10"></div>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8 relative">
+    <div>
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-accent-500 to-neon"></div>
+        <span class="font-semibold">Crypto Freelancing Institute</span>
+      </div>
+      <p class="mt-3 text-white/60 text-sm">Learn, build, and earn with structured programs and real mentorship.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Explore</h4>
+      <ul class="space-y-2 text-white/70 text-sm">
+        <li><a href="courses.html" class="hover:text-white">Courses</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Legal</h4>
+      <ul class="space-y-2 text-white/70 text-sm">
+        <li><a href="#" class="hover:text-white">Terms</a></li>
+        <li><a href="#" class="hover:text-white">Privacy</a></li>
+        <li><a href="#" class="hover:text-white">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Follow</h4>
+      <div class="flex gap-3 text-white/70">
+        <a href="#" class="hover:text-white">Fb</a>
+        <a href="#" class="hover:text-white">Ig</a>
+        <a href="#" class="hover:text-white">Li</a>
+        <a href="#" class="hover:text-white">Yt</a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/5 py-4 text-center text-white/60 text-sm relative">
+    © <span id="year"></span> Crypto Freelancing Institute. All rights reserved.
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // mobile nav
-    const navToggle = document.getElementById('navToggle');
-    const mobileNav = document.getElementById('mobileNav');
-    navToggle?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
-  </script>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/000000000000" target="_blank" class="fixed bottom-5 right-5 z-40 rounded-full bg-accent-500 p-4 shadow-neon hover:bg-accent-400 transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-base-900" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48..."/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
 
