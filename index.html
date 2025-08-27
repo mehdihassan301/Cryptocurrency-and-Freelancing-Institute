@@ -75,7 +75,7 @@
   </script> -->
 <!-- Header with Hamburger Navbar -->
 <!-- Navbar -->
-<header class="bg-black/30 backdrop-blur sticky top-0 z-50">
+<header class="bg-black sticky top-0 z-50">
   <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
     <!-- Logo -->
     <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-[#14ffec]">
@@ -92,12 +92,12 @@
       <a href="#enroll" class="bg-[#14ffec] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#0dffe0] transition">Enroll Now</a>
     </nav>
 
-    <!-- Mobile Hamburger -->
-    <button class="md:hidden text-2xl text-white" onclick="toggleMobileNav()">&#9776;</button>
+    <!-- Mobile Hamburger (=) -->
+    <button class="md:hidden text-2xl text-white" onclick="toggleMobileNav()">&#61;</button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileNav" class="hidden md:hidden bg-black/50 backdrop-blur px-6 py-4 flex flex-col space-y-2 text-white/90">
+  <div id="mobileNav" class="hidden md:hidden bg-black px-6 py-4 flex flex-col space-y-2 text-white/90">
     <a href="index.html" class="hover:text-[#14ffec] transition">Home</a>
     <a href="courses.html" class="hover:text-[#14ffec] transition">Courses</a>
     <a href="about.html" class="hover:text-[#14ffec] transition">About</a>
@@ -108,7 +108,8 @@
 
 <script>
   function toggleMobileNav() {
-    document.getElementById('mobileNav').classList.toggle('hidden');
+    const nav = document.getElementById('mobileNav');
+    nav.classList.toggle('hidden');
   }
 </script>
 
