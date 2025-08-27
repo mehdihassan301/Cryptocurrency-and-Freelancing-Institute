@@ -9,14 +9,33 @@
 </head>
 <body class="bg-[#0f172a] text-white">
 
-  <!-- Breadcrumbs -->
-  <nav class="max-w-7xl mx-auto px-6 py-6 text-sm">
-    <ol class="flex items-center space-x-2 text-white/70">
-      <li><a href="index.html" class="hover:text-[#14ffec]">Home</a></li>
-      <li>/</li>
-      <li class="text-[#14ffec] font-semibold">Courses</li>
-    </ol>
-  </nav>
+<!-- Navbar -->
+<header class="bg-black sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-[#14ffec]">
+      <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-[#14ffec] to-[#0d7377] shadow-lg"></div>
+      Crypto & Freelance Institute
+    </a>
+    <nav class="hidden md:flex space-x-6 text-white/80">
+      <a href="index.html" class="hover:text-[#14ffec] transition">Home</a>
+      <a href="courses.html" class="hover:text-[#14ffec] transition">Courses</a>
+      <a href="about.html" class="hover:text-[#14ffec] transition">About</a>
+      <a href="contact.html" class="hover:text-[#14ffec] transition">Contact</a>
+      <a href="enroll.html" class="bg-[#14ffec] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#0dffe0] transition">Enroll Now</a>
+    </nav>
+    <button class="md:hidden text-2xl text-white" onclick="toggleMobileNav()">&#61;</button>
+  </div>
+  <div id="mobileNav" class="hidden md:hidden bg-black px-6 py-4 flex flex-col space-y-2 text-white/90">
+    <a href="index.html" class="hover:text-[#14ffec] transition">Home</a>
+    <a href="courses.html" class="hover:text-[#14ffec] transition">Courses</a>
+    <a href="about.html" class="hover:text-[#14ffec] transition">About</a>
+    <a href="contact.html" class="hover:text-[#14ffec] transition">Contact</a>
+    <a href="enroll.html" class="bg-[#14ffec] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#0dffe0] transition text-center">Enroll Now</a>
+  </div>
+</header>
+<script>
+  function toggleMobileNav(){document.getElementById('mobileNav').classList.toggle('hidden');}
+</script>
 
   <!-- Courses Section -->
   <section id="courses" class="max-w-7xl mx-auto px-6 py-20">
