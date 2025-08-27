@@ -74,53 +74,44 @@
     function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXX');
   </script> -->
 <!-- Header with Hamburger Navbar -->
-  
-<header class="      <a href="index.html" class="text-xl font-bold accent">Crypto & Freelance Institute</a>
-      <nav class="space-x-6 hidden md:flex">
-        <a href="index.html" class="hover:accent">Home</a>
-        <a href="courses.html" class="accent">Courses</a>
-        <a href="about.html" class="hover:accent">About</a>
-        <a href="contact.html" class="hover:accent">Contact</a>
-      </nav>
-      <button class="md:hidden text-white text-2xl" onclick="toggleMobileNav()">&#9776;</button>
-    </div>
-
-  
+<!-- Navbar -->
+<header class="bg-black/30 backdrop-blur sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-2">
-      <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-accent-500 to-neon shadow-neon"></div>
-      <span class="font-semibold tracking-wide text-white">Crypto Freelancing Institute</span>
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-[#14ffec]">
+      <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-[#14ffec] to-[#0d7377] shadow-lg"></div>
+      Crypto & Freelance Institute
     </a>
 
-    <!-- Desktop Nav Links -->
-    <div class="hidden md:flex items-center gap-6">
-      <a href="courses.html" class="text-white hover:text-accent-500 transition">Courses</a>
-      <a href="about.html" class="text-white hover:text-accent-500 transition">About</a>
-      <a href="contact.html" class="text-white hover:text-accent-500 transition">Contact</a>
-      <a href="#enroll" class="btn-neon rounded-xl bg-accent-500 px-4 py-2 font-medium text-base-900 hover:bg-accent-400 transition">Enroll Now</a>
-    </div>
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6 text-white/80">
+      <a href="index.html" class="hover:text-[#14ffec] transition">Home</a>
+      <a href="courses.html" class="hover:text-[#14ffec] transition">Courses</a>
+      <a href="about.html" class="hover:text-[#14ffec] transition">About</a>
+      <a href="contact.html" class="hover:text-[#14ffec] transition">Contact</a>
+      <a href="#enroll" class="bg-[#14ffec] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#0dffe0] transition">Enroll Now</a>
+    </nav>
 
-    <!-- Hamburger Menu Icon -->
-    <button id="navToggle" class="md:hidden p-2 rounded-lg border border-white/10 text-white" onclick="toggleMobileNav()">
-      &#9776;
-    </button>
+    <!-- Mobile Hamburger -->
+    <button class="md:hidden text-2xl text-white" onclick="toggleMobileNav()">&#9776;</button>
   </div>
 
-  <!-- Mobile Nav Menu -->
-    <div id="mobileNav" class="hidden md:hidden bg-base-900/95 border-t border-white/5 px-6 py-3">
-      <a href="index.html" class="block py-2 hover:accent">Home</a>
-      <a href="courses.html" class="block py-2 accent">Courses</a>
-      <a href="about.html" class="block py-2 hover:accent">About</a>
-      <a href="contact.html" class="block py-2 hover:accent">Contact</a>
-    </div>
+  <!-- Mobile Menu -->
+  <div id="mobileNav" class="hidden md:hidden bg-black/50 backdrop-blur px-6 py-4 flex flex-col space-y-2 text-white/90">
+    <a href="index.html" class="hover:text-[#14ffec] transition">Home</a>
+    <a href="courses.html" class="hover:text-[#14ffec] transition">Courses</a>
+    <a href="about.html" class="hover:text-[#14ffec] transition">About</a>
+    <a href="contact.html" class="hover:text-[#14ffec] transition">Contact</a>
+    <a href="#enroll" class="bg-[#14ffec] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#0dffe0] transition text-center">Enroll Now</a>
+  </div>
 </header>
 
 <script>
   function toggleMobileNav() {
-    const nav = document.getElementById('mobileNav');
-    nav.classList.toggle('hidden'); // Show/hide mobile menu
+    document.getElementById('mobileNav').classList.toggle('hidden');
   }
 </script>
+
 
   <!-- Hero -->
   <section id="home" class="bg-hero-gradient relative overflow-hidden">
