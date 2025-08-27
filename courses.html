@@ -8,121 +8,153 @@
   <style>
     :root {
       --primary-color: #14ffec;
-      --secondary-color: #0d7377;
+      --accent-color: #0d7377;
       --dark-bg: #0a0a0a;
       --light-text: #e6f4f1;
     }
+
     body {
-      background: var(--dark-bg);
+      background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(20,20,20,0.95) 100%);
       color: var(--light-text);
+      font-family: sans-serif;
     }
+
     .accent {
       color: var(--primary-color);
     }
-    .btn-primary {
+
+    .btn-accent {
       background: var(--primary-color);
       color: #000;
       font-weight: bold;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
     }
-    .btn-primary:hover {
+
+    .btn-accent:hover {
       background: #0dffe0;
+    }
+
+    /* Neon glow card */
+    .course-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 20px rgba(20, 255, 236, 0.1);
+      transition: all 0.3s ease, transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(20, 255, 236, 0.8),
+                  0 0 40px rgba(20, 255, 236, 0.6),
+                  0 0 60px rgba(20, 255, 236, 0.4);
+      border-color: rgba(20, 255, 236, 0.6);
     }
   </style>
 </head>
-<body class="font-sans">
+<body>
+
   <!-- Header -->
   <header class="bg-black bg-opacity-80 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
       <a href="index.html" class="text-xl font-bold accent">Crypto & Freelance Institute</a>
-      <nav class="space-x-6">
+      <nav class="space-x-6 hidden md:flex">
         <a href="index.html" class="hover:accent">Home</a>
         <a href="courses.html" class="accent">Courses</a>
         <a href="about.html" class="hover:accent">About</a>
         <a href="contact.html" class="hover:accent">Contact</a>
       </nav>
+      <button class="md:hidden text-white text-2xl" onclick="toggleMobileNav()">&#9776;</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileNav" class="hidden md:hidden bg-base-900/95 border-t border-white/5 px-6 py-3">
+      <a href="index.html" class="block py-2 hover:accent">Home</a>
+      <a href="courses.html" class="block py-2 accent">Courses</a>
+      <a href="about.html" class="block py-2 hover:accent">About</a>
+      <a href="contact.html" class="block py-2 hover:accent">Contact</a>
     </div>
   </header>
 
- <!-- Courses Section -->
-<section id="courses" class="container mx-auto px-6 py-16">
-  <div class="text-center mb-10">
-    <h2 class="text-3xl font-bold text-white">Courses & Programs</h2>
-    <p class="text-white/60">Choose a track that fits your goal</p>
-  </div>
-
-  <div class="grid md:grid-cols-3 gap-8">
-    <!-- Basic -->
-    <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold text-accent-400">Basic</h3>
-      <ul class="mt-4 text-white/70 space-y-2">
-        <li>Duration: 1 month</li>
-        <li>Crypto Fundamentals</li>
-        <li>Freelance Basics</li>
-        <li>Live Trading Included</li>
-      </ul>
-      <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
+  <!-- Courses Section -->
+  <section class="container mx-auto px-6 py-16">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-white">Courses & Programs</h2>
+      <p class="text-white/60">Choose a track that fits your goal</p>
     </div>
 
-    <!-- Intermediate -->
-    <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold text-accent-400">Intermediate</h3>
-      <ul class="mt-4 text-white/70 space-y-2">
-        <li>Duration: 2 months</li>
-        <li>Advanced Crypto Concepts</li>
-        <li>Freelance Projects & Portfolio</li>
-        <li>Live Trading Included</li>
-      </ul>
-      <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
-    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Basic -->
+      <div class="course-card">
+        <h3 class="text-xl font-semibold text-accent mb-4">Basic</h3>
+        <ul class="text-white/70 space-y-2">
+          <li>Duration: 1 month</li>
+          <li>Crypto Fundamentals</li>
+          <li>Freelance Basics</li>
+          <li>Live Trading Included</li>
+        </ul>
+        <a href="#enroll" class="mt-6 inline-block w-full text-center btn-accent">Enroll</a>
+      </div>
 
-    <!-- Premium -->
-    <div class="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-      <h3 class="text-xl font-semibold text-accent-400">Premium</h3>
-      <ul class="mt-4 text-white/70 space-y-2">
-        <li>Duration: 3 months</li>
-        <li>Full Crypto Trading & Strategy</li>
-        <li>Freelance Business & Client Management</li>
-        <li>Live Trading Included</li>
-      </ul>
-      <a href="#enroll" class="mt-6 inline-block w-full text-center bg-accent-500 text-base-900 font-semibold py-2 rounded-lg hover:bg-accent-400 transition">Enroll</a>
-    </div>
-  </div>
-</section>
+      <!-- Standard -->
+      <div class="course-card">
+        <h3 class="text-xl font-semibold text-accent mb-4">Standard</h3>
+        <ul class="text-white/70 space-y-2">
+          <li>Duration: 2 months</li>
+          <li>Advanced Crypto Concepts</li>
+          <li>Freelance Projects & Portfolio</li>
+          <li>Live Trading Included</li>
+        </ul>
+        <a href="#enroll" class="mt-6 inline-block w-full text-center btn-accent">Enroll</a>
+      </div>
 
+      <!-- Premium -->
+      <div class="course-card">
+        <h3 class="text-xl font-semibold text-accent mb-4">Premium</h3>
+        <ul class="text-white/70 space-y-2">
+          <li>Duration: 3 months</li>
+          <li>Full Crypto Trading & Strategy</li>
+          <li>Freelance Business & Client Management</li>
+          <li>Live Trading Included</li>
+        </ul>
+        <a href="#enroll" class="mt-6 inline-block w-full text-center btn-accent">Enroll</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-<footer class="bg-gray-900 text-gray-300 pt-12 pb-6">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-    
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-3 text-white">Quick Links</h3>
-      <ul class="space-y-2">
-        <li><a href="about.html" class="hover:text-yellow-400">About Us</a></li>
-        <li><a href="#" class="hover:text-yellow-400">FAQ’s</a></li>
-        <li><a href="contact.html" class="hover:text-yellow-400">Contact Us</a></li>
-      </ul>
+  <footer class="bg-gray-900 text-gray-300 pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-white">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="about.html" class="hover:text-yellow-400">About Us</a></li>
+          <li><a href="#" class="hover:text-yellow-400">FAQ’s</a></li>
+          <li><a href="contact.html" class="hover:text-yellow-400">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-white">Contact Details</h3>
+        <p>📧 info@crypto-freelancing.com</p>
+        <p>📍 DHA Phase 6, Bukhari Commercial Area, Karachi</p>
+        <p>📞 +92 319 8206439</p>
+      </div>
     </div>
 
-    <!-- Contact Details -->
-    <div>
-      <h3 class="text-lg font-semibold mb-3 text-white">Contact Details</h3>
-      <p>📧 info@crypto-freelancing.com</p>
-      <p>📍 DHA Phase 6, Bukhari Commercial Area, Karachi</p>
-      <p>📞 +92 319 8206439</p>
+    <div class="mt-8 border-t border-gray-700 pt-4 text-center text-sm">
+      <p>Copyright © 2025 <a href="https://www.probsolv.online" class="text-yellow-400 hover:underline">A Probsolv</a>. All rights reserved.</p>
     </div>
+  </footer>
 
-  </div>
+  <script>
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('hidden');
+    }
+  </script>
 
-  <!-- Bottom Bar -->
-  <div class="mt-8 border-t border-gray-700 pt-4 text-center text-sm">
-    <p>Copyright © 2025 
-      <a href="https://www.probsolv.online" class="text-yellow-400 hover:underline">A Probsolv</a>. All rights reserved.
-    </p>
-  </div>
-</footer>
 
 <!-- Font Awesome for Social Icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
