@@ -124,58 +124,63 @@
     <p class="text-gray-400 mt-2">Get a glimpse of our crypto trading sessions</p>
   </div>
   
-  <div class="relative overflow-hidden rounded-2xl shadow-lg">
+  <!-- Responsive Video Wrapper -->
+  <div class="relative w-full" style="padding-top: 56.25%;"> <!-- 16:9 ratio -->
     <iframe 
       src="https://drive.google.com/file/d/1RkZpnj66tQBqHc8n_HFWpWD5294MRvNk/preview" 
-      width="100%" 
-      height="480" 
-      allow="autoplay" 
-      class="rounded-2xl">
+      class="absolute top-0 left-0 w-full h-full rounded-2xl shadow-lg" 
+      allow="autoplay">
     </iframe>
   </div>
 </section>
 
 
+
   <!-- Footer -->
-  <footer class="relative bg-hero-gradient overflow-hidden border-t border-white/10 mt-20">
-    <div class="absolute inset-0 bg-grid bg-[size:22px_22px] opacity-10"></div>
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8 relative">
-      <div>
-        <div class="flex items-center gap-2">
-          <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-accent-500 to-neon"></div>
-          <span class="font-semibold">Crypto Freelancing Institute</span>
-        </div>
-        <p class="mt-3 text-white/60 text-sm">Learn, build, and earn with structured programs and real mentorship.</p>
+<footer class="relative bg-hero-gradient overflow-hidden border-t border-white/10">
+  <div class="absolute inset-0 bg-grid bg-[size:22px_22px] opacity-10"></div>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-4 gap-8 relative">
+    <div>
+      <div class="flex items-center gap-2">
+        <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-accent-500 to-neon"></div>
+        <span class="font-semibold">Crypto Freelancing Institute</span>
       </div>
-      <div>
-        <h4 class="font-semibold mb-3">Explore</h4>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li><a href="courses.html" class="hover:text-white">Courses</a></li>
-          <li><a href="about.html" class="hover:text-white">About</a></li>
-          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-          <li><a href="enroll.html" class="hover:text-white">Enroll Now</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Legal</h4>
-        <ul class="space-y-2 text-white/70 text-sm">
-          <li><a href="#" class="hover:text-white">Terms</a></li>
-          <li><a href="#" class="hover:text-white">Privacy</a></li>
-          <li><a href="#" class="hover:text-white">Refund Policy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Follow</h4>
-        <div class="flex gap-3 text-white/70">
-          <a href="https://www.facebook.com/profile.php?id=61567271347491" class="hover:text-white">Facebook</a>
-          <a href="https://www.tiktok.com/@crypto.institute?_t=ZS-8zDtVW6guzI&_r=1" class="hover:text-white">Tiktok</a>
-        </div>
+      <p class="mt-3 text-white/60 text-sm">Learn, build, and earn with structured programs and real mentorship.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Explore</h4>
+      <ul class="space-y-2 text-white/70 text-sm">
+        <li><a href="courses.html" class="hover:text-white">Courses</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+        <li><a href="enroll.html" class="hover:text-white">Enroll Now</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Legal</h4>
+      <ul class="space-y-2 text-white/70 text-sm">
+        <li><a href="terms.html" class="hover:text-white">Terms</a></li>
+        <li><a href="privacy.html" class="hover:text-white">Privacy</a></li>
+        <li><a href="refund-policy.html" class="hover:text-white">Refund Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Follow</h4>
+      <div class="flex gap-4 text-white/70 text-lg">
+        <a href="https://www.facebook.com/profile.php?id=61567271347491" class="hover:text-white" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.tiktok.com/@crypto.institute?_t=ZS-8zDtVW6guzI&_r=1" class="hover:text-white" target="_blank" aria-label="TikTok">
+          <i class="fab fa-tiktok"></i>
+        </a>
       </div>
     </div>
-    <div class="border-t border-white/5 py-4 text-center text-white/60 text-sm relative">
-      © <span id="year"></span> Crypto Freelancing Institute. All rights reserved.
-    </div>
-  </footer>
+  </div>
+  <div class="border-t border-white/5 py-4 text-center text-white/60 text-sm relative">
+    © <span id="year"></span> Crypto Freelancing Institute. All rights reserved.
+  </div>
+</footer>
+
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/923198206439" 
