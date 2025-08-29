@@ -8,7 +8,7 @@
 </head>
 <body class="bg-gray-950 text-white">
 
-  <!-- Navbar (reuse same as index.html for consistency) -->
+  <!-- Navbar -->
   <header class="bg-black sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
       <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-[#14ffec]">
@@ -30,7 +30,8 @@
       <h1 class="text-3xl font-bold text-center text-[#14ffec] mb-6">Enroll Now</h1>
       <p class="text-gray-400 text-center mb-6">Fill out the form below to reserve your spot in our program.</p>
 
-      <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-4">
+      <!-- Enrollment Form -->
+      <form id="enrollForm" action="https://formspree.io/f/meolelrv" method="POST" class="space-y-4">
         <!-- Full Name -->
         <div>
           <label class="block mb-1 text-gray-300">Full Name</label>
@@ -71,14 +72,43 @@
           Submit Enrollment
         </button>
       </form>
+
+      <!-- Success Message (hidden by default) -->
+      <div id="successMessage" class="hidden mt-6 p-4 text-center text-green-400 bg-gray-800 rounded-lg">
+        ✅ Thanks for submitting the enrollment form! We will get back to you soon.
+      </div>
     </div>
   </section>
 
- 
   <!-- Footer -->
   <footer class="bg-black py-6 mt-12 text-center text-gray-400 text-sm">
     <p>© 2025 Crypto & Freelance Institute. All rights reserved. | Credits <a href="https://www.probsolv.online" class="text-[#14ffec] hover:underline">ProbSolv</a> Developer</p>
   </footer>
 
+  <!-- Script for handling success message -->
+  <script>
+    const form = document.getElementById('enrollForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault(); // prevent default submit
+
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset(); // clear form fields
+        successMessage.classList.remove('hidden'); // show success message
+      } else {
+        alert('❌ Oops! Something went wrong. Please try again.');
+      }
+    });
+  </script>
+
 </body>
 </html>
+
