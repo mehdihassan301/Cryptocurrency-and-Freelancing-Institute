@@ -6,6 +6,10 @@
   <title>About Us - Crypto Freelancing Institute</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { overflow-x: hidden; }  /* Prevent sideways scrolling */
+    iframe { max-width: 100%; }  /* Map responsive */
+  </style>
 </head>
 <body class="bg-[#0f172a] text-white">
 
@@ -66,8 +70,9 @@
   <!-- Trainers -->
   <section class="bg-[#1e293b] py-16 text-center">
     <h2 class="text-3xl font-bold text-[#14ffec] mb-4">👨‍🏫 Our Trainers</h2>
-    <p class="max-w-2xl mx-auto text-gray-300">Our trainers are highly experienced professionals in cryptocurrency trading, freelancing, dropshipping, and ethical hacking. They teach real-world skills that students can directly apply to earn online.</p>
+    <p class="max-w-2xl mx-auto text-gray-300 break-words">Our trainers are highly experienced professionals in cryptocurrency trading, freelancing, dropshipping, and ethical hacking. They teach real-world skills that students can directly apply to earn online.</p>
   </section>
+
 <!-- Certificates Section -->
 <section class="py-16 bg-[#0f172a]" id="certificates">
   <div class="max-w-6xl mx-auto px-6 text-center">
@@ -77,7 +82,7 @@
     </p>
 
     <!-- Certificate Grid -->
-    <div class="grid gap-10 md:grid-cols-2">
+    <div class="grid gap-10 md:grid-cols-2 overflow-hidden">
       
       <!-- Certificate 1 -->
       <a href="cert1.jpg" target="_blank" rel="noopener noreferrer" 
@@ -87,7 +92,7 @@
              loading="lazy" 
              class="rounded-lg mx-auto mb-4 shadow-md max-h-72 object-contain w-full">
         <h3 class="text-white font-semibold">Certificate of Excellence</h3>
-        <p class="text-gray-400 text-sm">Awarded for outstanding training in cryptocurrency education.</p>
+        <p class="text-gray-400 text-sm break-words">Awarded for outstanding training in cryptocurrency education.</p>
       </a>
 
       <!-- Certificate 2 -->
@@ -98,7 +103,7 @@
              loading="lazy" 
              class="rounded-lg mx-auto mb-4 shadow-md max-h-72 object-contain w-full">
         <h3 class="text-white font-semibold">Certificate of Training</h3>
-        <p class="text-gray-400 text-sm">Recognition of professional-level freelancing & digital skills training.</p>
+        <p class="text-gray-400 text-sm break-words">Recognition of professional-level freelancing & digital skills training.</p>
       </a>
 
     </div>
@@ -115,7 +120,7 @@
       Real feedback from learners who joined our programs.
     </p>
 
-    <div class="grid gap-8 md:grid-cols-3">
+    <div class="grid gap-8 md:grid-cols-3 overflow-hidden">
      
       <!-- Review 1 -->
       <a href="https://maps.app.goo.gl/Hwp4JRaq9kEnAbw38" target="_blank" class="bg-black/50 rounded-2xl p-6 shadow-lg text-left hover:scale-105 transition transform">
@@ -129,7 +134,7 @@
         <div class="flex text-yellow-400 mb-2">
           ★★★★★
         </div>
-        <p class="text-gray-300 text-sm">
+        <p class="text-gray-300 text-sm break-words">
        Best institute for learning cryptocurrency & freelancing! Easy to understand, supportive mentors, and very practical training. Highly recommended for anyone who wants real skills and a successful future.
         </p>
       </a>
@@ -146,7 +151,7 @@
         <div class="flex text-yellow-400 mb-2">
           ★★★★★
         </div>
-        <p class="text-gray-300 text-sm">
+        <p class="text-gray-300 text-sm break-words">
         I learned crypto from this institute it is the best in all and the teachers are very generous and dedicated. I make profit of about almost $5000 a month. I am very much satisfied and I also recommend it to all.
         </p>
       </a>
@@ -163,17 +168,21 @@
         <div class="flex text-yellow-400 mb-2">
           ★★★★★
         </div>
-        <p class="text-gray-300 text-sm">
+        <p class="text-gray-300 text-sm break-words">
         This institute is the best. I've learned crypto from here the teachers are very good they always helped me whenever I needed help and taught me crypto very well. I make a profit of $500 per month. I highly recommend it.
         </p>
       </a>
     </div>
+  </div>
+</section>
 
  
 
   <!-- Location Map -->
   <section class="w-full h-96">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.015686592623!2d67.06155450953274!3d24.79491637788031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33756548f771b%3A0xfb341ff590d18ae3!2scryptocurrency%20and%20freelancing%20institute!5e0!3m2!1sen!2s!4v1756301031077!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.015686592623!2d67.06155450953274!3d24.79491637788031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33756548f771b%3A0xfb341ff590d18ae3!2scryptocurrency%20and%20freelancing%20institute!5e0!3m2!1sen!2s!4v1756301031077!5m2!1sen!2s" 
+            class="w-full h-full border-0"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </section>
 
   <!-- Footer -->
